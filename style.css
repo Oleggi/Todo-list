@@ -1,0 +1,177 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: linear-gradient(120deg, rgb(87, 74, 198), rgb(174, 67, 221));
+    color: rgb(228, 222, 222);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 2rem;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: .7rem;
+    border: none;
+    font-size: 2rem;
+    background: white;
+    transition: all .3s ease-out;
+}
+
+form input:hover {
+    box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(104, 103, 103, 0.5);
+}
+
+form button {
+    color: rgb(174, 67, 221);
+    background-color: white;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+form button:hover {
+    background-color:  rgb(174, 67, 221);
+    color: white;
+}
+
+/* Styling todo-items */
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: .3rem;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .6rem;
+    transition: all .5s ease-out;
+}
+
+.todo li {
+    flex: 1;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    padding-left: .5rem;
+}
+
+.todo:hover {
+    box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(104, 103, 103, 0.5);
+}
+.trash-btn,
+.cheked-btn {
+    background-color: rgb(205, 54, 235);
+    color: white;
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    font-size: 1rem;
+}   
+
+.cheked-btn {
+    background-color: rgb(14, 212, 179); 
+}
+
+.trash-btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(219, 24, 17);
+}
+
+
+.cheked-btn:hover {
+    background-color: rgb(239, 243, 207);
+    color: rgb(12, 183, 235);
+}
+
+.todo-item {
+    padding: 0 .6rem;
+}
+
+.fa-trash-alt, .fa-check {
+    pointer-events: none;
+} 
+
+.completed {
+    text-decoration: line-through;
+    opacity: .7;
+}
+
+
+.fade-out {
+    transform: translateX(10rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none; /*Убирает стандартные стили с select*/
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    position: relative;
+    margin: 1.8rem;
+    overflow: hidden;
+}
+
+select {
+    color: rgb(113, 9, 134);
+    width: 16rem;
+    cursor: pointer;
+    padding: 1rem;
+    
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: rgb(160, 19, 189);
+    height: 100%;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    padding: 1rem;
+    transition: all .3s ease-out;
+}
+
+.select:hover::after {
+    background: white;
+    color: rgb(160, 19, 189);
+}
+
+
+
